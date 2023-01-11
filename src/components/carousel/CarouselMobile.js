@@ -1,127 +1,94 @@
 import React, { Component } from 'react';
-// import ReactCardCarousel from 'react-card-carousel';
+import Slider from "react-slick";
 import './assets/css/style.css';
-import { Link } from 'react-router-dom'
-
-class MyCarouselMobile extends Component {
-
-  static get CARD_STYLE() {
-    return {
-      height: '200px',
-      width: '200px',
-      paddingTop: '10px',
-      paddingBottom: '10px',
-    //   textAlign: 'center', 
-      background: 'black',
-      color: 'white',
-      fontSize: '12px',
-     
-      borderRadius: '5px',
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    };
-  }
-
-  static get CONTAINER_STYLE() {
-    return {
-      position: "relative",
-      height: "100%",
-      width: "100%",
-      display: "flex",
-      justifyContent: "center",
-    //   margin: "auto"
-    };
-  }
-
-  
-  static get INNER_CARD_STYLE() {
-    return {
-      textDecoration: "none",
-      color: "white",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      
-    //   margin: "auto"
-    };
-  }
-
-  static get CARD_DESC_STYLE() {
-    return {
-      color: "lightgray",
-      display: "flex",
-      flexDirection: "column",
-      width: "80%",
-      justifyContent: "center",
-      alignItems: "center",
-      textAlign: "center",
-      
-
-      
-    //   margin: "auto"
-    };
-  }
-  static get LINK_STYLE() {
-    return {
-      color: "white",
-      lineHeight: "140%",
-
-    //   margin: "auto"
-    };
-  }
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import jquery from "jquery";
 
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#ededed", padding:"200px 28px 20px 26px", zIndex:"100", height:"180px" }}
+      onClick={onClick}
+    />
+  );
+}
 
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black", padding:"200px 28px 20px 26px", zIndex:"100", height:"180px" }}
+      onClick={onClick}
+    />
+  );
+}
+
+export default class MyCarousel extends Component {
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 1400,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      autoplay: true,
+      autoplaySpeed: 7000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    
+    };
     return (
-      //   <div style={MyCarouselMobile.CONTAINER_STYLE}>
-      // <ReactCardCarousel autoplay={ true } autoplay_speed={ 6000 }>
-      //   <div style={ MyCarouselMobile.CARD_STYLE }>
-      //     <a style={ MyCarouselMobile.INNER_CARD_STYLE } target="_blank" href="https://adjective.media">
-      //       <img src="./assets/images/adj-02.png" height="50px"/>
-      //       <p>ADJECTIVE.MEDIA</p>
-      //     </a>
-      //     <div style={ MyCarouselMobile.CARD_DESC_STYLE }>
-      //       <p>The website of a web development start up company</p>
-      //     </div>
-      //   </div>
-      //   <div style={ MyCarouselMobile.CARD_STYLE }>
-      //     <a style={ MyCarouselMobile.INNER_CARD_STYLE } target="_blank" href="https://kingpong.co">
-      //       <img src="./assets/images/weblogo.png" height="50px"/>
-      //       <p>KINGPONG.CO</p>
-      //     </a>
-      //     <div style={ MyCarouselMobile.CARD_DESC_STYLE }>
-      //       <p>The website of King Pong LLC, an online table tennis business</p>
-      //     </div>
-      //   </div>
-      //   {/* <div style={ MyCarouselMobile.CARD_STYLE }>
-      //     <Link style={ MyCarouselMobile.INNER_CARD_STYLE } to="/mailchimp">
-      //       <img src="./assets/images/MailchimpImage.png" height="50px"/> 
-      //       <p>MAILCHIMP PROJECT</p>
-      //     </Link>
-      //     <div style={ MyCarouselMobile.CARD_DESC_STYLE }>
-      //       <p>A newsletter campaign created using Mailchimp</p>
-      //     </div>
-      //   </div> */}
+      <div className="outerContainer">
+      <div className="cardContainerMobile">
+        {/* <h2> Single Item</h2> */}
+        <Slider {...settings} className="innerCardContainerMobile">
         
-      //   <div style={ MyCarouselMobile.CARD_STYLE }>
-      //     <a style={ MyCarouselMobile.INNER_CARD_STYLE } target="_blank" href="https://devinsemailtemplates.com">
-      //       <img src="./assets/images/template2.png" height="50px"/>
-      //       <p>EMAIL TEMPLATES</p>
-      //     </a>
-      //     <div style={ MyCarouselMobile.CARD_DESC_STYLE }>
-      //       <p>Developed email templates with HTML:</p>
-      //       <a style={ MyCarouselMobile.LINK_STYLE } href="https://devinsemailtemplates.com"><p>View Templates</p></a>
-      //     </div>
-      //   </div>
-      // </ReactCardCarousel>
-      // </div>
-      <div></div>
+          <div className="cardStyle1Mobile cardStyle">
+            
+            <h3>Email Templates</h3>
+            <div className="imageContainer">
+           <img src="./assets/images/muzic.png" height="90px"/>
+           </div>
+       <p className="wordStyle"><em>Developed email templates with HTML</em></p>
+       <div className="buttonContainer">
+    <a className="buttonMobile" href="https://devinsemailtemplates.com"><p>View Templates</p></a>
+    </div>
+          </div>
+          <div className="cardStyle2Mobile cardStyle">
+          
+            <h3>Adjective Media</h3>
+            <div className="imageContainer">
+            <img src="./assets/images/adj-02.png" height="90px"/>
+            </div>
+            <p className="wordStyle"><em>The website of a web development start up company</em></p>
+            <div className="buttonContainer">
+    <a className="buttonMobile" href="https://adjective.media"><p>Visit Site</p></a>
+    </div>
+          </div>
+          
+          <div className="cardStyle3Mobile cardStyle">
+          
+            <h3>King Pong</h3>
+            <div className="imageContainer">
+            <img src="./assets/images/kingpong-logo.png" height="90px"/>
+            </div>
+            <p className="wordStyle"><em>The website of an online table tennis business</em></p>
+            <div className="buttonContainer">
+    <a className="buttonMobile" href="https://kingpong.co"><p>Visit Site</p></a>
+    </div>
+          </div>
+          
+          
+        </Slider>
+      </div>
+    
+      </div>
     );
   }
 }
-
-export default MyCarouselMobile;
