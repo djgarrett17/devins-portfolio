@@ -93,13 +93,14 @@ h3{
 }
 
 .cardContainerMobile{
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
     /* border-radius: 10px; */
     /* border-left: solid 4px rgb(59, 137, 182); */
 }
 .innerCardContainerMobile{
     background-color: white;
-    width: 100vw;
+    width: 100%;
     border-left: solid 0px rgb(59, 137, 182);
     border-right: solid 0px rgb(59, 137, 182);
 
@@ -149,21 +150,12 @@ p{
     p{
         /* width: 80%; */
         font-size: medium;
-        text-align: center !important;
         
     }
     .wordStyle{
         margin: 0px 30px;
     }
-    .cardStyle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-       text-align: center !important;
-      
-       
-    }
+    
 
 }
 

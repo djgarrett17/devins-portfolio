@@ -18,7 +18,17 @@ function Navbar() {
     //       $("#navbar").css({"height": "125px"});
     //   }
     // });
-
+    if ($(window).width() < 768) {
+      $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 60) {
+          $("#navbar").css({"height": "0px"});
+        } else {
+            $("#navbar").css({"height": "100px"});
+        }
+      });
+   }
+   else {
     $(document).scroll(function() {
       var y = $(this).scrollTop();
       if (y > 240) {
@@ -27,6 +37,8 @@ function Navbar() {
           $("#navbar").css({"height": "100px"});
       }
     });
+   }
+    
 
     // var modal = document.getElementById("myModal");
         // var modal = document.getElementsByClassName("modal");
