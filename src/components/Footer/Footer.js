@@ -43,7 +43,7 @@ render (){
             </div>
 
             <div className="copyrightDiv">
-                <span>Copyright. All Rights Reserved 2022.</span>  
+                <span>Copyright. All Rights Reserved 2023.</span>  
             </div>
         </div>
     )
