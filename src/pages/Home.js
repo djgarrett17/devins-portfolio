@@ -9,9 +9,10 @@ import MyCarousel from '../components/carousel/Carousel.js';
 import MyCarouselMobile from '../components/carousel/CarouselMobile.js';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
-const url = "https://gmail.us7.list-manage.com/subscribe/post?u=c68de41bfc664ec4031b6ae19&amp;id=70f43ec4e5&amp;f_id=004893e3f0";
+const url = "https://gmail.us7.list-manage.com/subscribe/post?u=c68de41bfc664ec4031b6ae19&amp;id=1205be10e7&amp;f_id=009496e3f0";
 
 // import { BsArrowRightShort } from "react-icons/bs";
+// simplest form (only email)
 const SimpleForm = () => <MailchimpSubscribe url={url}/>
 
 const Home = () => {
@@ -31,6 +32,12 @@ const Home = () => {
                 <div className="carouselMobile">
                     <MyCarouselMobile/>
                 </div>
+            </div>
+            <div className="subscribeDiv">
+                <p className="subscribeTxt">Subscribe to my newsletter and receive a prize!</p>
+            </div>
+            <div className="formDiv">
+                    <SimpleForm/>
             </div>
             {/* <div className="subscribeDiv">
                 <p className="subscribeTxt">Subscribe to my newsletter to receive your prize!</p>

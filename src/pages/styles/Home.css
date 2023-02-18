@@ -19,14 +19,14 @@
     text-align: center;
     color: rgb(15, 15, 15);
 }
-.emailDiv input{
+.formDiv input{
     font-size: x-large;
     line-height: 150%;
     padding: 10px 16px;
     border: 4px solid black;
     border-right: none;
 }
-.emailDiv button{
+.formDiv button{
     font-size: x-large;
     line-height: 150%;
     padding: 10px 16px;
@@ -41,16 +41,16 @@
 .carouselMobile{
     display: none;
 }
-.emailDiv{
+.formDiv{
     margin-bottom: 40px;
 }
 
-div > form{
+/* div > form{
     display: flex;
     width: 100%;
-    /* justify-content: space-between; */
-}   
-form > input {
+    justify-content: space-between;
+}    */
+/* form > input {
     font-weight: 100;
     color: rgb(216, 216, 216);
     background: white;
@@ -69,7 +69,7 @@ form > div {
     font-size: 10px;
     height: auto;
     padding: 0px 8px;
-}
+} */
 
     @media only screen and (max-width: 768px){
         .homeWrap{
@@ -85,22 +85,38 @@ form > div {
             margin-top: 180px; 
             margin-bottom: -160px;
         }
-        div > form{
+        /* div > form{
+            display: flex;
+            width: 100%;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             height: 180px;
-        } 
+        }  */
         .subscribeDiv{
             width: 80%;
             justify-content: center;
         }
-        .emailDiv{
-            width: 60%;
+        .formDiv{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        form > button {
-            width: 80px;
-        } 
+        .formDiv input{
+            font-size: large;
+            line-height: 150%;
+            padding: 8px 14px;
+            border: 4px solid black;
+            border-right: none;
+        }
+        .formDiv button{
+            font-size: large;
+            line-height: 150%;
+            padding: 8px 14px;
+            border: 4px solid black;
+        }
 }   
 
 
