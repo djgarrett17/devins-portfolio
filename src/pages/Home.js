@@ -9,7 +9,7 @@ import MyCarousel from '../components/carousel/Carousel.js';
 import MyCarouselMobile from '../components/carousel/CarouselMobile.js';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
-const url = "https://gmail.us7.list-manage.com/subscribe/post?u=c68de41bfc664ec4031b6ae19&amp;id=1205be10e7&amp;f_id=009496e3f0";
+const url = "https://gmail.us22.list-manage.com/subscribe/post?u=40ec691997dd3bb870572c1cd&amp;id=06f4f1ef98";
 
 // import { BsArrowRightShort } from "react-icons/bs";
 // simplest form (only email)
